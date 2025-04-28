@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Cakes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+        header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .header-strip {
+            
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            padding: 20px 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background: #f9e2e2;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .sidebar label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .products {
+            flex-grow: 1;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-card .info {
+            padding: 10px;
+        }
+        .product-card .info h4 {
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+        .product-card .info p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .price {
+            color: #000;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .stars {
+            color: #f8b400;
+            font-size: 14px;
+        }
+        .sort-bar {
+            text-align: right;
+            margin: 0 20px;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-strip">
+        Designer Cakes
+    </div>
+
+<div class="sort-bar">
+    Sort by: <select>
+        <option>Best selling</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+    </select>
+</div>
+
+<div class="container">
+    <aside class="sidebar">
+        <h3>Filters</h3>
+        <label><input type="checkbox"> Healthy Cake (1)</label>
+        <label><input type="checkbox"> Sugar Free (1)</label>
+
+        <h3>Price</h3>
+        <label>From <input type="text" size="5"> To <input type="text" size="5"></label>
+
+        <h3>Flavor</h3>
+        <label><input type="checkbox"> Black Forest (2396)</label>
+        <label><input type="checkbox"> Butterscotch (136)</label>
+        <label><input type="checkbox"> Caramel Butterscotch (2262)</label>
+        <label><input type="checkbox"> Chocolate Truffle (2434)</label>
+        <label><input type="checkbox"> Exotic Pineapple (2297)</label>
+        <label><input type="checkbox"> Pineapple (100)</label>
+        <label><input type="checkbox"> Red Velvet (1)</label>
+
+        <h3>Product Type</h3>
+        <label><input type="checkbox"> Cupcakes (8)</label>
+        <label><input type="checkbox"> Designer Cakes (3463)</label>
+
+        <h3>Ingredients</h3>
+        <label><input type="checkbox"> Egg (3328)</label>
+        <label><input type="checkbox"> Eggless (3426)</label>
+    </aside>
+
+    <section class="products">
+        <div class="product-card">
+            <img src="chocolate_cake.jpg" alt="Cake 1">
+            <div class="info">
+                <h4>Cake for a Workaholic</h4>
+                <p>Earliest delivery: <strong>Today</strong></p>
+                <p class="price">₹1,299</p>
+                <div class="stars">★★★★★ (230)</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="chocolate_cake.jpg" alt="Cake 2">
+            <div class="info">
+                <h4>Colorful Drip Cake</h4>
+                <p>Earliest delivery: <strong>Today</strong></p>
+                <p class="price">₹999</p>
+                <div class="stars">★★★★★ (142)</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="chocolate_cake.jpg" alt="Cake 3">
+            <div class="info">
+                <h4>Beer Mug 4</h4>
+                <p>Earliest delivery: <strong>Today</strong></p>
+                <p class="price">₹1,499</p>
+                <div class="stars">★★★★★ (145)</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="chocolate_cake.jpg" alt="Cake 4">
+            <div class="info">
+                <h4>Animal Kingdom Cake</h4>
+                <p>Earliest delivery: <strong>Today</strong></p>
+                <p class="price">₹1,799</p>
+                <div class="stars">★★★★★ (98)</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="chocolate_cake.jpg" alt="Cake 5">
+            <div class="info">
+                <h4>Cherry Blossom Cake</h4>
+                <p>Earliest delivery: <strong>Today</strong></p>
+                <p class="price">₹1,599</p>
+                <div class="stars">★★★★★ (65)</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="chocolate_cake.jpg" alt="Cake 6">
+            <div class="info">
+                <h4>Makeup Theme Cake</h4>
+                <p>Earliest delivery: <strong>Today</strong></p>
+                <p class="price">₹1,899</p>
+                <div class="stars">★★★★★ (76)</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

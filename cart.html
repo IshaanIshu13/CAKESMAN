@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cake Order Booking</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff5f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .order-form {
+            background: white;
+            padding: 40px 50px;
+            width: 700px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .order-form h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #d6336c;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #ff4785;
+        }
+    </style>
+</head>
+<body>
+
+<div class="order-form">
+    <h1>Cake Order Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="cakeName">Cake Name</label>
+            <input type="text" id="cakeName" name="cakeName" required>
+        </div>
+        <div class="form-group">
+            <label for="customerName">Customer Name</label>
+            <input type="text" id="customerName" name="customerName" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="delivery">Delivery (Yes/No)</label>
+            <select id="delivery" name="delivery" required>
+                <option value="">--Select--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="deliveryDate">Delivery Date</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" required>
+        </div>
+        <div class="form-group">
+            <label for="amount">Total Amount (₹)</label>
+            <input type="number" id="amount" name="amount" required>
+        </div>
+        <div class="form-group">
+            <label for="payment">Payment Method</label>
+            <select id="payment" name="payment" required>
+                <option value="">--Select--</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
+                <option value="Pay Online">Pay Online</option>
+            </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Book Cake</button>
+    </form>
+</div>
+
+</body>
+</html>
