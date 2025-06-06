@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Indulgence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fce4ec; /* Light pink background */
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fce4ec;
+        }
+        h1 {
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            font-size: 1.2em;
+            color: #666;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            background-color: #fce4ec;
+            border-bottom: 1px solid #f8bbd0;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+        nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #555;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            text-align: center; /* Center text under image */
+        }
+        nav a:hover {
+            color: #e91e63; /* Pink on hover */
+        }
+        nav img {
+            width: 80px; /* Adjust size as needed */
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff; /* White border for circles */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 5px;
+        }
+        .section-container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        section {
+            padding: 60px 0; /* Add padding for scrolling */
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 2.5em;
+            color: #e91e63; /* Pink for section titles */
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background-color: #e91e63;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .cake-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+        .cake-item {
+            background-color: #fff;
+            border: 1px solid #f8bbd0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            padding-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        .cake-item:hover {
+            transform: translateY(-5px);
+        }
+        .cake-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #f8bbd0;
+        }
+        .cake-item h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 15px 0 10px;
+        }
+        .cake-item p {
+            font-size: 1em;
+            color: #666;
+            margin: 5px 0;
+        }
+        .cake-item .price {
+            font-size: 1.3em;
+            color: #e91e63;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #fce4ec;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sweet Indulgence</h1>
+        <p class="subtitle">Irresistible delights to elevate any celebration.</p>
+    </header>
+
+    <nav>
+        <a href="#all-cakes">
+            <img src="all.cakes.png" alt="All Cakes">
+            <span>All Cakes</span>
+        </a>
+        <a href="#gourmet-cakes">
+            <img src="gourmet@Cakes.png" alt="Gourmet Cakes">
+            <span>Gourmet Cakes</span>
+        </a>
+        <a href="#chocolate-cakes">
+            <img src="chocolate_cake.jpg" alt="Chocolate Cakes">
+            <span>Chocolate</span>
+        </a>
+        <a href="#cheesecakes">
+            <img src="cheese@cake.png" alt="Cheesecakes">
+            <span>Cheesecakes</span>
+        </a>
+        <a href="#butterscotch-cakes">
+            <img src="butter@cake.png" alt="Butterscotch Cakes">
+            <span>Butterscotch</span>
+        </a>
+        <a href="#pineapple-cakes">
+            <img src="pineapple@cake.png" alt="Pineapple Cakes">
+            <span>Pineapple</span>
+        </a>
+        <a href="#fresh-fruit-cakes">
+            <img src="freshfruit@cake.png" alt="Fresh Fruit Cakes">
+            <span>Fresh Fruit</span>
+        </a>
+        <a href="#red-velvet-cakes">
+            <img src="red_velvet.jpg" alt="Red Velvet Cakes">
+            <span>Red Velvet</span>
+        </a>
+        <a href="#cupcakes">
+            <img src="cup@cake.png" alt="Cupcakes">
+            <span>Cupcakes</span>
+        </a>
+    </nav>
+
+    <div class="section-container">
+        <section id="all-cakes">
+            <h2>All Cakes</h2>
+            <div class="cake-grid">
+                <div class="cake-item">
+                    <img src="fudge.png" alt="Chocolate Fudge Cake">
+                    <h3>Chocolate Fudge Delight</h3>
+                    <p>Rich and decadent chocolate fudge cake.</p>
+                    <p class="price">₹ 750 (500g) | ₹ 1300 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="bliss.png" alt="Strawberry Bliss Cake">
+                    <h3>Strawberry Bliss</h3>
+                    <p>Light sponge with fresh strawberries and cream.</p>
+                    <p class="price">₹ 800 (500g) | ₹ 1400 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="cheeseblue.png" alt="Blueberry Cheesecake">
+                    <h3>Classic Blueberry Cheesecake</h3>
+                    <p>Creamy cheesecake with a delightful blueberry topping.</p>
+                    <p class="price">₹ 950 (500g) | ₹ 1700 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="pineapple2@cake.png" alt="Pineapple Paradise Cake">
+                    <h3>Pineapple Paradise</h3>
+                    <p>Tropical pineapple cake, a refreshing treat.</p>
+                    <p class="price">₹ 700 (500g) | ₹ 1200 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="red_velvet.jpg" alt="Red Velvet Dream Cake">
+                    <h3>Red Velvet Dream</h3>
+                    <p>Classic red velvet with cream cheese frosting.</p>
+                    <p class="price">₹ 850 (500g) | ₹ 1500 (1kg)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gourmet-cakes">
+            <h2>Gourmet Cakes</h2>
+            <div class="cake-grid">
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Belgian+Chocolate" alt="Belgian Chocolate Cake">
+                    <h3>Belgian Chocolate Indulgence</h3>
+                    <p>Finest Belgian chocolate ganache cake.</p>
+                    <p class="price">₹ 1100 (500g) | ₹ 2000 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Hazelnut+Praline" alt="Hazelnut Praline Cake">
+                    <h3>Hazelnut Praline Royal</h3>
+                    <p>Layers of hazelnut praline and chocolate.</p>
+                    <p class="price">₹ 1050 (500g) | ₹ 1900 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Opera+Cake" alt="Opera Cake">
+                    <h3>Opera Cake</h3>
+                    <p>A classic French coffee and chocolate cake.</p>
+                    <p class="price">₹ 1200 (500g) | ₹ 2200 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Pistachio+Rose" alt="Pistachio Rose Cake">
+                    <h3>Pistachio Rose Delight</h3>
+                    <p>Exotic flavors of pistachio and delicate rose.</p>
+                    <p class="price">₹ 980 (500g) | ₹ 1750 (1kg)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="chocolate-cakes">
+            <h2>Chocolate Cakes</h2>
+            <div class="cake-grid">
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Dark+Chocolate" alt="Dark Chocolate Cake">
+                    <h3>Dark Chocolate Decadence</h3>
+                    <p>Intensely rich dark chocolate cake for true lovers.</p>
+                    <p class="price">₹ 850 (500g) | ₹ 1500 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Choco+Truffle" alt="Chocolate Truffle Cake">
+                    <h3>Chocolate Truffle Temptation</h3>
+                    <p>Smooth and creamy chocolate truffle layers.</p>
+                    <p class="price">₹ 900 (500g) | ₹ 1600 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Chocolate+Mousse" alt="Chocolate Mousse Cake">
+                    <h3>Chocolate Mousse Dream</h3>
+                    <p>Light and airy chocolate mousse cake.</p>
+                    <p class="price">₹ 820 (500g) | ₹ 1450 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Ferrero+Rocher" alt="Ferrero Rocher Cake">
+                    <h3>Ferrero Rocher Delight</h3>
+                    <p>Inspired by the classic Ferrero Rocher chocolate.</p>
+                    <p class="price">₹ 1000 (500g) | ₹ 1800 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Death+by+Choco" alt="Death by Chocolate Cake">
+                    <h3>Death by Chocolate</h3>
+                    <p>An extreme chocolate experience!</p>
+                    <p class="price">₹ 950 (500g) | ₹ 1700 (1kg)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cheesecakes">
+            <h2>Cheesecakes</h2>
+            <div class="cake-grid">
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=New+York+Cheese" alt="New York Cheesecake">
+                    <h3>Classic New York Cheesecake</h3>
+                    <p>Rich, dense, and creamy, a true classic.</p>
+                    <p class="price">₹ 900 (500g) | ₹ 1600 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Strawberry+Cheese" alt="Strawberry Cheesecake">
+                    <h3>Strawberry Swirl Cheesecake</h3>
+                    <p>Creamy cheesecake with luscious strawberry swirls.</p>
+                    <p class="price">₹ 950 (500g) | ₹ 1700 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Oreo+Cheese" alt="Oreo Cheesecake">
+                    <h3>Oreo Cookie Cheesecake</h3>
+                    <p>Packed with crunchy Oreo cookies.</p>
+                    <p class="price">₹ 920 (500g) | ₹ 1650 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Mango+Cheese" alt="Mango Cheesecake">
+                    <h3>Tropical Mango Cheesecake</h3>
+                    <p>Seasonal delight with fresh mango flavor.</p>
+                    <p class="price">₹ 1000 (500g) | ₹ 1800 (1kg)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="butterscotch-cakes">
+            <h2>Butterscotch Cakes</h2>
+            <div class="cake-grid">
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Butterscotch+Crunch" alt="Butterscotch Crunch Cake">
+                    <h3>Butterscotch Crunch</h3>
+                    <p>Classic butterscotch with a delightful crunch.</p>
+                    <p class="price">₹ 750 (500g) | ₹ 1300 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Caramel+Butterscotch" alt="Caramel Butterscotch Cake">
+                    <h3>Caramel Butterscotch</h3>
+                    <p>Sweet caramel notes infused with butterscotch.</p>
+                    <p class="price">₹ 780 (500g) | ₹ 1350 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Walnut+Butterscotch" alt="Walnut Butterscotch Cake">
+                    <h3>Walnut Butterscotch</h3>
+                    <p>Crunchy walnuts combined with rich butterscotch.</p>
+                    <p class="price">₹ 800 (500g) | ₹ 1400 (1kg)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pineapple-cakes">
+            <h2>Pineapple Cakes</h2>
+            <div class="cake-grid">
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Pineapple+Delight" alt="Pineapple Delight Cake">
+                    <h3>Pineapple Delight</h3>
+                    <p>Classic pineapple cake with fresh cream.</p>
+                    <p class="price">₹ 700 (500g) | ₹ 1200 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Fresh+Pineapple" alt="Fresh Pineapple Cake">
+                    <h3>Fresh Pineapple Fantasy</h3>
+                    <p>Made with real pineapple chunks for authentic taste.</p>
+                    <p class="price">₹ 720 (500g) | ₹ 1250 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Pineapple+Upside+Down" alt="Pineapple Upside Down Cake">
+                    <h3>Pineapple Upside Down</h3>
+                    <p>A classic with caramelized pineapple on top.</p>
+                    <p class="price">₹ 750 (500g) | ₹ 1300 (1kg)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fresh-fruit-cakes">
+            <h2>Fresh Fruit Cakes</h2>
+            <div class="cake-grid">
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Mixed+Fruit" alt="Mixed Fruit Cake">
+                    <h3>Mixed Fruit Medley</h3>
+                    <p>A delightful assortment of seasonal fresh fruits.</p>
+                    <p class="price">₹ 880 (500g) | ₹ 1550 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Kiwi+Strawberry" alt="Kiwi Strawberry Cake">
+                    <h3>Kiwi Strawberry Bliss</h3>
+                    <p>Refreshing combination of kiwi and strawberry.</p>
+                    <p class="price">₹ 900 (500g) | ₹ 1600 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Exotic+Fruit" alt="Exotic Fruit Cake">
+                    <h3>Exotic Fruit Extravaganza</h3>
+                    <p>Featuring a variety of exotic fruits.</p>
+                    <p class="price">₹ 950 (500g) | ₹ 1700 (1kg)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="red-velvet-cakes">
+            <h2>Red Velvet Cakes</h2>
+            <div class="cake-grid">
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Classic+Red+Velvet" alt="Classic Red Velvet Cake">
+                    <h3>Classic Red Velvet</h3>
+                    <p>Velvety soft cake with tangy cream cheese frosting.</p>
+                    <p class="price">₹ 850 (500g) | ₹ 1500 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Red+Velvet+Heart" alt="Red Velvet Heart Cake">
+                    <h3>Red Velvet Heart</h3>
+                    <p>Perfect for special occasions, shaped like a heart.</p>
+                    <p class="price">₹ 900 (500g) | ₹ 1600 (1kg)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Red+Velvet+Tier" alt="Red Velvet Tier Cake">
+                    <h3>Red Velvet Tiered Cake</h3>
+                    <p>Multi-layered red velvet for grand celebrations.</p>
+                    <p class="price">Starting from ₹ 2500 (1.5kg)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cupcakes">
+            <h2>Cupcakes</h2>
+            <div class="cake-grid">
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Chocolate+Cupcakes" alt="Chocolate Cupcakes">
+                    <h3>Assorted Chocolate Cupcakes</h3>
+                    <p>Mini chocolate delights in various flavors.</p>
+                    <p class="price">₹ 300 (Pack of 6) | ₹ 550 (Pack of 12)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Vanilla+Cupcakes" alt="Vanilla Cupcakes">
+                    <h3>Vanilla Bean Cupcakes</h3>
+                    <p>Classic vanilla cupcakes with creamy frosting.</p>
+                    <p class="price">₹ 280 (Pack of 6) | ₹ 500 (Pack of 12)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Red+Velvet+Cupcakes" alt="Red Velvet Cupcakes">
+                    <h3>Red Velvet Cupcakes</h3>
+                    <p>Individual servings of the popular red velvet cake.</p>
+                    <p class="price">₹ 320 (Pack of 6) | ₹ 600 (Pack of 12)</p>
+                </div>
+                <div class="cake-item">
+                    <img src="https://via.placeholder.com/300x200?text=Fruit+Cupcakes" alt="Fruit Cupcakes">
+                    <h3>Fruit Topped Cupcakes</h3>
+                    <p>Fresh fruit toppings on light cupcakes.</p>
+                    <p class="price">₹ 350 (Pack of 6) | ₹ 650 (Pack of 12)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sweet Indulgence. All rights reserved.</p>
+    </footer>
+</body>
+</html>
